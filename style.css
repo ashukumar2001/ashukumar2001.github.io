@@ -1,0 +1,139 @@
+/* CSS Reset */
+body {
+    margin: 0px;
+    padding: 0px;
+    background: url(bg.jpg);
+    background-repeat: none;
+    width: 100%;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.left {
+    display: inline-block;
+    /* border: 2px solid red; */
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 0px 12px;
+}
+
+.mid {
+    /* border: 2px solid yellow; */
+    display: block;
+    width: 33%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.right {
+    display: inline-block;
+    /* border: 2px solid green; */
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    
+}
+    /* unordered list styling */
+div.mid ul.navbar {
+    padding: 0px;
+}
+
+    /* list styling */
+div.mid ul.navbar li {
+    list-style: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+    /* link styling */
+div.mid ul.navbar li a{
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+}
+
+    /* hover on link */
+div.mid ul.navbar li a:hover, div.mid ul.navbar li a.active {
+    text-decoration: underline;
+    color: lightgrey;
+}
+
+    /* logo styling */
+.left a {
+    margin: 0px;
+    padding: 0px;
+}
+.left a img {
+    width: 120px;
+}
+
+.left {
+    text-align: center;
+    font-size: 20px;
+}
+
+    /* button style */
+button.btn {
+    padding: 5px 15px;
+    background-color: rgba(0, 0,0,0.5);
+    color: white;
+    
+    border: 1px groove darkgrey;
+    border-radius: 20px;
+    margin: 20px;
+    cursor: pointer;
+    font-family: 'Bebas Neue', cursive;
+}
+
+    /* button hover */
+button.btn:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+    /* join form container */
+div.container {
+    border: 0.5px solid white;
+    width: 33%;
+    margin: 100px auto;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: rgba(0, 0,0,0.6);
+}
+
+.form_group input {
+    text-align: center;
+    width: 80%;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 5px 0px;
+    font-family: 'Bebas Neue', cursive;
+    border: 2px solid black;
+}
+
+div.designer {
+    border: 2px solid white;
+    background-color: rgba(0, 0,0,0.6);
+    width: 25%;
+    margin: 20px auto;
+    border-radius: 15px;
+
+}
+
+div.designer h4 {
+    text-align: center;
+    font-size: 20px;
+}
+
+div.designer_image img#image {
+    width: 50%;
+    height: 50%;
+    position: cennter;
+}
+div.designer_image h5 {
+    font-size: 15px;
+    margin: 2px;
+}
+
+
