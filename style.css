@@ -2,8 +2,9 @@
 body {
     margin: 0px;
     padding: 0px;
-    background: url(https://cdn.pixabay.com/photo/2017/01/09/11/30/dumbbell-1966247_960_720.jpg);
     background: black;
+    background: url(https://cdn.pixabay.com/photo/2017/01/09/11/30/dumbbell-1966247_960_720.jpg);
+    
     background-repeat: none;
     width: 100%;
     color: white;
