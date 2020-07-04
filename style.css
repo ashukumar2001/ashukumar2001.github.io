@@ -3,6 +3,7 @@ body {
     margin: 0px;
     padding: 0px;
     background: url(bg.jpg);
+    background-color: black;
     background-repeat: none;
     width: 100%;
     color: white;
