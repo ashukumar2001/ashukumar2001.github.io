@@ -1,0 +1,25 @@
+svg {
+    margin-bottom: 6px;
+    
+}
+
+a.navbar-brand img#brand-logo {
+    width: 50px;
+    
+}
+
+a#brand-name {
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+nav.navbar {
+    box-shadow: 0px 1px 3px rgb(31, 31, 31);
+   
+}
+
+ul.navbar-nav li.nav-item {
+    border-bottom: 1px solid rgb(179, 228, 255);
+}
