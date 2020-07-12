@@ -1,25 +1,237 @@
-svg {
-    margin-bottom: 6px;
-    
-}
 
+
+/**** Navigation Bar ****/
 a.navbar-brand img#brand-logo {
     width: 50px;
-    
+    height: auto;
+
+}
+a.navbar-brand {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+button.navbar-toggler {
+    border: 0px;
+}
+nav.navbar {
+    border-bottom: 1px solid black;
 }
 
-a#brand-name {
-    font-weight: bold;
-    font-size: 1.3rem;
+/**** Main Box with background ****/
+.main-bg { 
+    width: 100%; 
+    position: relative; 
+    padding: 20% 0%;
+}
+.main-bg::before { 
+    background: url(../images/bg.jpg) no-repeat center center/cover; 
+    content: ""; 
+    display: block; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    z-index: -2; 
+    opacity: 0.9; 
+}
+div.main-content{
+    width: 100%;
+    margin: auto;
+    /* background-color: rgba(255, 255, 255, 0.6); */
+    background-color: rgba(255, 253, 253, 0.7);
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.);
+}
+div.main-content p {
+    margin-bottom: 0px;
+    padding: 0px 10px;
+    /* color: white; */
+    /* font-family: 'Neucha', cursive; */
+    /* font-family: 'Source Code Pro', monospace; */
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    /* text-transform: uppercase; */
+    font-weight: 600;
+    /* text-shadow: 1px 1px 1px rgb(130, 130, 130); */
+    /* font-family: 'Bowlby One SC', cursive; */
+}
+
+div.main-content p span#blue {
+    color: rgb(30, 111, 251);
+}
+div.main-content p span#yellow {
+    color: rgb(249, 255, 60);
+}
+div.main-content p span#red {
+    color: rgb(243, 9, 9);
+}
+div.main-content p span#grey {
+    color: rgb(111, 111, 111);
+}
+div.main-content p span#green {
+    color: rgb(9, 195, 43);
+}
+
+
+/**** Project Section ****/
+
+div#testing-div {
+    width: 100%;    
+    /* height: 400px; */
+    margin-bottom: 100px;
+    font-family: 'Montserrat', sans-serif;
+    /* border: 1px solid green; */
+}
+
+div.container .row .col-12 {
+    /* border: 1px solid black; */
+    margin-bottom: 10px;
+    padding: 10px;
+
+}
+
+div.container .row .col-12 .description {
+    padding: 0px;    
+}
+
+div.container .row .projects .col-6 {
+    /* border: 1px solid red; */
+    width: 50%; 
+}
+
+div.container .row .col-12#project-heading {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.container .row .projects .description p.description-heading {
+
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.container .row .projects .description p.description-content {
     font-family: 'Quicksand', sans-serif;
     
 }
 
-nav.navbar {
-    box-shadow: 0px 1px 3px rgb(31, 31, 31);
-   
+.container .row .projects:hover {
+    box-shadow: 1px 1px 3px black;
 }
 
-ul.navbar-nav li.nav-item {
-    border-bottom: 1px solid rgb(179, 228, 255);
+div.container .row .project .image img.img-fluid:hover {
+    box-shadow: 1px 1px 3px black;
 }
+
+a.seelive-button {
+    text-decoration: none;
+    border: 1 px solid rgb(52, 110, 255);
+}
+
+
+
+
+
+
+
+/* ******** Responsive Design ******** */
+
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    /* div.main-content p {
+        font-size: 20px;
+    } */
+       div.container .row .projects .image { 
+        width: 100%;
+    }
+    div.container .row .projects .description {
+        width: 100%;
+    }
+
+    div.container .row .col-12 {
+        padding: 10px 50px;
+    }
+
+    .container .row .projects .description p.description-heading {
+        font-size: 18px;
+    }
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width:767px) { 
+    
+    .main-bg {
+        padding: 15% 0%;
+        
+    }
+    div.container .row .projects .image {
+        width: 30%;
+    }
+    
+    div.container .row .projects .description {
+        width: 70%;
+        padding: 0px 10px;
+    }
+
+    .container .row .projects .description p.description-heading {
+        font-size: 22px;
+    }
+    
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    
+
+    .main-bg {
+        padding: 12% 0%;
+        
+    }
+    div.container .row .projects .image {
+        width: 30%;
+    }
+    div.container .row .projects .description {
+        width: 70%;
+        padding: 0px 10px;
+    }
+    
+    .container .row .projects .description p.description-heading {
+        font-size: 25px;
+    }
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width:1199px){ 
+
+    .main-bg {
+        padding: 8% 0%;  
+    }
+    /* div.main-content p {
+        font-size: 30px;
+    } */
+    div.container .row .projects .description {
+        /* width: 70%; */
+        padding: 0px 10px;
+    }
+
+ }
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+    .main-bg {
+        padding: 5% 0%;  
+    }
+    div.main-content p {
+        font-size: 40px;
+    }
+    div.container .row .projects .description {
+        /* width: 70%; */
+        padding: 0px 10px;
+    }
+ }
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+/* @media (min-width: 1400px) { ... } */
