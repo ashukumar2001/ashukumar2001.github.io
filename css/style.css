@@ -19,11 +19,23 @@ nav.navbar {
 
 /**** Main Box with background ****/
 .main-bg { 
-    width: 100%; 
-    position: relative; 
-    padding: 20% 0%;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 0;
+    background: #fff;
+    font-weight: 400;
+    color: #272341;
+    padding: 0 5.6rem;
+    margin-bottom: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
 }
-.main-bg::before { 
+/* .main-bg::before { 
     background: url(../images/bg.jpg) no-repeat center center/cover; 
     content: ""; 
     display: block; 
@@ -34,13 +46,14 @@ nav.navbar {
     height: 100%; 
     z-index: -2; 
     opacity: 0.9; 
-}
+} */
 div.main-content{
     width: 100%;
-    margin: auto;
+    /* margin: auto; */
     /* background-color: rgba(255, 255, 255, 0.6); */
     background-color: rgba(255, 253, 253, 0.7);
-    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.);
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+    font-family: 'Quicksand', sans-serif;
 }
 div.main-content p {
     margin-bottom: 0px;
@@ -48,12 +61,19 @@ div.main-content p {
     /* color: white; */
     /* font-family: 'Neucha', cursive; */
     /* font-family: 'Source Code Pro', monospace; */
-    font-family: 'Quicksand', sans-serif;
+    
     font-size: 25px;
     /* text-transform: uppercase; */
     font-weight: 600;
     /* text-shadow: 1px 1px 1px rgb(130, 130, 130); */
     /* font-family: 'Bowlby One SC', cursive; */
+}
+
+a button.btn {
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 0px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 div.main-content p span#blue {
@@ -99,7 +119,7 @@ div.container .row .projects .col-6 {
     width: 50%; 
 }
 
-div.container .row .col-12#project-heading {
+div.container .row .col-12#project-heading, h2#about-heading , h2#contact-heading {
     font-size: 30px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -125,15 +145,104 @@ div.container .row .project .image img.img-fluid:hover {
     box-shadow: 1px 1px 3px black;
 }
 
-a.seelive-button {
-    text-decoration: none;
-    border: 1 px solid rgb(52, 110, 255);
+
+
+section{
+    padding: 2rem 0px;
 }
 
+section#about {
+    background-color: #02aab0;
+    background-image: linear-gradient(135deg,#02aab0,#00cdac);
+    color: #fff;
+    height: 100%;
+    border-top: 0;
+    
+    padding-bottom: 10%
+}
 
+.about_wrapper_image img {
+    width: 40%;
+    /* border: 1px solid black; */
+    margin: auto;
+}
 
+.about-wrapper {
+    /* border: 1px solid red; */
+    /* margin-bottom:10% ; */
+    /* padding-bottom: 20%; */
+}
 
+.about-wrapper .about {
+    /* border: 1px solid green; */
+}
 
+.about_wrapper_content {
+    /* border: 1px solid blueviolet; */
+    /* width: 70%; */
+    /* margin-bottom: 50px; */
+    /* padding-bottom: 100px; */
+    font-family: 'Quicksand', sans-serif;
+}
+
+.about_wrapper_image {
+    display: flex;
+    justify-content: center;
+    /* width: 20%; */
+}
+
+.color-white, button.contact {
+    color: white;
+    border: 1px solid white;
+}
+
+div.about_wrapper_content a.seelive-button button.resume, button.contact {
+    border-width: 3px;
+}
+div.about_wrapper_content a.seelive-button button.resume:hover, button.contact:hover {
+    color: #02aab0;
+    background-color: white;
+    border-color: white;
+}
+
+/* Contact Section */
+#contact {
+    background-image: linear-gradient(135deg,#02aab0,#00cdac);
+    
+    padding: 5rem 0 2rem;
+    margin-top:-5rem;
+    margin-bottom: -1px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+section#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+a.footer-icon {
+    text-decoration: none;
+    color: white;
+    font-size:3rem;
+    padding: 0.5rem;
+}
+
+.row .icons-wrapper {
+    margin-bottom: 0px;
+}
+
+p.footer-text {
+    color: grey;
+    font-size: 1rem;
+    margin: 0px;
+}
+
+a.developer-name {
+    text-decoration: none;
+    color: inherit;
+}
 
 
 /* ******** Responsive Design ******** */
@@ -144,7 +253,8 @@ a.seelive-button {
         font-size: 20px;
     } */
        div.container .row .projects .image { 
-        width: 100%;
+        width: 70%;
+        height: auto;
     }
     div.container .row .projects .description {
         width: 100%;
@@ -157,6 +267,19 @@ a.seelive-button {
     .container .row .projects .description p.description-heading {
         font-size: 18px;
     }
+    a button.btn {
+        font-weight: 400;
+        padding: 3px;
+        font-size: 16px;
+    }
+
+    .about_wrapper_content {
+        /* padding-bottom: 50px; */
+    }
+
+    /* .about-wrapper {
+        padding-bottom: 30%;
+    } */
 }
 
 /* // Small devices (landscape phones, 576px and up) */
@@ -178,8 +301,31 @@ a.seelive-button {
     .container .row .projects .description p.description-heading {
         font-size: 22px;
     }
+
+    section#about {
+    -webkit-clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
+    clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
+    }
+
+    div#contact {
+        -webkit-clip-path: polygon(0 15vh,100% 0,100% 100%,0 100%);
+        clip-path: polygon(0 15vh,100% 0,100% 100%,0 100%);
+    }
     
+    .about-wrapper {
+        padding-bottom: 5%;
+    }
 }
+
+
+
+
+
+
+
+
+
+
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
@@ -200,6 +346,21 @@ a.seelive-button {
     .container .row .projects .description p.description-heading {
         font-size: 25px;
     }
+    
+
+    section#about {
+        -webkit-clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
+        clip-path: polygon(0 0,100% 0,100% 80%,0 100%);
+        }
+
+
+    div#contact {
+        -webkit-clip-path: polygon(0 15vh,100% 0,100% 100%,0 100%);
+        clip-path: polygon(0 15vh,100% 0,100% 100%,0 100%);
+    }
+
+    
+    
  }
 
 /* // Large devices (desktops, 992px and up) */
@@ -211,10 +372,17 @@ a.seelive-button {
     /* div.main-content p {
         font-size: 30px;
     } */
+    div.container .row .projects .image {
+        width: 30%;
+    }
     div.container .row .projects .description {
-        /* width: 70%; */
+        width: 70%;
         padding: 0px 10px;
     }
+    /* div.container .row .projects .image { 
+        width: 50%;
+        height: auto;
+    } */
 
  }
 
@@ -233,5 +401,3 @@ a.seelive-button {
     }
  }
 
-/* // XX-Large devices (larger desktops, 1400px and up) */
-/* @media (min-width: 1400px) { ... } */
