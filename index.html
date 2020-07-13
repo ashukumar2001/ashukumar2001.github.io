@@ -20,12 +20,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/7e611a5a25.js" crossorigin="anonymous"></script>
+
 
     <title>BootStrap5 Website</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a href="index.html" class="navbar-brand"><img src="images/designer.png" alt="brand-logo"
                     id="brand-logo"></a>
@@ -48,7 +51,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
-                    <!-- <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                   Dropdown
                 </a>
@@ -66,33 +69,57 @@
             <form class="d-flex">
               <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> -->
+            </form>
             </div>
         </div>
-    </nav>
+    </nav> -->
 
     <div class="main-bg">
         <div class="main-content text-center">
             <p>&lt;<span id="green">Hi, </span><span id="red">my name is </span><span id="blue">Ashu</span>&gt;
                 <br>&lt;<span id="blue">I like to </span><span id="green">make stuff with </span> <span
                     id="grey">code</span>/&gt;</p>
+            <a href="#about-heading" class="resume-button"><button type="button" class="btn btn-outline-info">Know More</button></a>
         </div>
     </div>
 
+    
+    <section id="about">
+        <div class="container">
+            <div class="about-wrapper row align-items-center"> 
+                <div class="col-12 text-center"><h2 id="about-heading">ABOUT ME</h2></div>
+                <div class="col-md-6 col-sm-12 about align-items-center">
+                    <div class="about_wrapper_image">
+                        <img src="/Project/bootstrap5_website/images/designer.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 about_wrapper_content">
+                    <p class="about_content">I am a Web Developer with enthusiasm and focus on Frontend Development and Scripting.</p>
+                    <p class="about_content">I am passionate about building scalable software, creating effective solutions, and learning every day to grow professionally in the IT field.</p>
+                    <p class="about_content">Feel free to contact me via email at any time</p>
+                    <a href="#" class="seelive-button"><button type="button" class="btn btn-outline-info color-white resume">Resume</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <div class="container" id="testing-div">
         <div class="row">
             <div class="col-12 text-center" id="project-heading">
                 <h2>Projects</h2>
             </div>
-            <div class="col-12 projects row g-0"> 
-                <div class="col-6 col-sm-12 image" id="image1"> 
+            <div class="col-12 projects row g-0">
+                <div class="col-6 col-sm-12 image" id="image1">
                     <img src="./images/projectimage.jpg" class="img-fluid" alt="...">
                 </div>
-                <div class="col-6 col-sm-12 description"> 
+                <div class="col-6 col-sm-12 description">
                     <p class="description-heading">This is unknown project</p>
-                    <p class="description-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, ipsum.</p>
-                    <a href="#" class="seelive-button"><button type="button" class="btn btn-outline-info">See Live</button></a>
-                    <a href="#" class="seelive-button"><button type="button" class="btn btn-outline-info">View Source Code</button></a>
+                    <p class="description-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia,
+                        ipsum.</p>
+                    <a href="#" class="seelive-button"><button type="button" class="btn btn-outline-info">See
+                            Live</button></a>
+                    <a href="#" class="seelive-button"><button type="button" class="btn btn-outline-info">View Source
+                            Code</button></a>
                 </div>
             </div>
             <div class="col-12 projects row g-0">
@@ -101,9 +128,12 @@
                 </div>
                 <div class="col-6 col-sm-12 description">
                     <p class="description-heading">This is unknown project</p>
-                    <p class="description-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, ipsum.</p>
-                    <a href="#" class="seelive-button"><button type="button" class="btn btn-outline-info">See Live</button></a>
-                    <a href="#" class="seelive-button"><button type="button" class="btn btn-outline-info">View Source Code</button></a>
+                    <p class="description-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia,
+                        ipsum.</p>
+                    <a href="#" class="seelive-button"><button type="button" class="btn btn-outline-info">See
+                            Live</button></a>
+                    <a href="#" class="seelive-button"><button type="button" class="btn btn-outline-info">View Source
+                            Code</button></a>
                 </div>
             </div>
             <div class="col-12 projects row g-0">
@@ -112,16 +142,59 @@
                 </div>
                 <div class="col-6 col-sm-12 description">
                     <p class="description-heading">This is unknown project</p>
-                    <p class="description-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia, ipsum.</p>
-                    <a href="#" class="seelive-button"><button type="button" class="btn btn-outline-info">See Live</button></a>
-                    <a href="#" class="seelive-button"><button type="button" class="btn btn-outline-info">View Source Code</button></a>
+                    <p class="description-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia,
+                        ipsum.</p>
+                    <a href="#" class="seelive-button"><button type="button" class="btn btn-outline-info">See
+                            Live</button></a>
+                    <a href="#" class="seelive-button"><button type="button" class="btn btn-outline-info">View Source
+                            Code</button></a>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <!-- Optional JavaScript -->
+    <div id="contact">
+
+        <div class="container">
+            <div class="row contact-wrapper text-center">
+                <div class="col-12">
+                    <h2 id="contact-heading">Contact</h2>
+                </div>
+                <div class="col-12">
+                    <p class="contact-content">
+                        Would you like to work with me? Awesome!
+                    </p>
+                    <a href="mailto:kumar.ashu414283@gmail.com" class="seelive-button"><button type="button" class="btn btn-outline-info contact">Let's build together!</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="footer">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12 icons-wrapper ">
+                    <a href="https://github.com/ashukumar2001" target="_blank" class="footer-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://twitter.com/ashukumar2001" target="_blank" class="footer-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ashu-kumar-2045411a1/" target="_blank" class="footer-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <hr>
+                    <p class="footer-text text-center">
+                        &copy; 2020 - Website developed by <a href="https://www.instagram.com/ashukumar2001" class="developer-name">Ashu Kumar</a> 
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+        <!-- Optional JavaScript -->
     <!-- Popper.js first, then Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
