@@ -6,7 +6,6 @@ const buttons = {
   sourceCode: document.querySelector(".source-code"),
 };
 let value = 0;
-
 const dataHandler = ({ img, title, description, liveUrl, sourceCodeUrl }) => {
   imgTag.src = img;
   projectHeadingTag.textContent = title;
@@ -15,11 +14,14 @@ const dataHandler = ({ img, title, description, liveUrl, sourceCodeUrl }) => {
   buttons.sourceCode.href = sourceCodeUrl;
 };
 
-document.querySelector(".left").addEventListener("click", () => {
-  value = (projectData.length + value - 1) % projectData.length;
+window.addEventListener("load", () => {
   dataHandler(projectData[value]);
-});
-document.querySelector(".right").addEventListener("click", () => {
-  value = (value + 1) % projectData.length;
-  dataHandler(projectData[value]);
+  document.querySelector(".left").addEventListener("click", () => {
+    value = (projectData.length + value - 1) % projectData.length;
+    dataHandler(projectData[value]);
+  });
+  document.querySelector(".right").addEventListener("click", () => {
+    value = (value + 1) % projectData.length;
+    dataHandler(projectData[value]);
+  });
 });
