@@ -4,7 +4,10 @@ import {
     LinkedinFilled,
     TwitterCircleFilled,
 } from "@ant-design/icons";
-
+import boardify_home from "@/public/projects/boardify/boardify_home.png"
+import boardify_editor from "@/public/projects/boardify/boardify_editor.png"
+import texting_screens from "@/public/projects/texting/texting-screens.png"
+import netflix_home from "@/public/projects/netflix/Netflix_home.png";
 export const skills = [
     {
         id: 1,
@@ -90,7 +93,7 @@ export const projects = [
         name: "Texting",
         description: "A real-time chat application for one to one chat.",
         imageDir: "/projects/texting/",
-        images: ["texting-screens.png"],
+        images: [texting_screens],
         liveURL: "https://texting-azure.vercel.app",
         sourceCodeURL: "https://github.com/ashukumar2001/texting",
     },
@@ -100,9 +103,19 @@ export const projects = [
         description:
             "The online whiteboard for your team's best work. From brainstorming with digital sticky notes to planning and managing agile workflows, Boardify has everything you need to move work forward.",
         imageDir: "/projects/boardify/",
-        images: ["boardify.jpeg"],
+        images: [boardify_home, boardify_editor],
         liveURL: "https://boardify-kappa.vercel.app",
         sourceCodeURL: "https://github.com/ashukumar2001/boardify",
+    },
+    {
+        id: 3,
+        name: "Netflix front-end clone",
+        description:
+            "Netflix's front-end clone created with ReactJS. It uses TMDB api to fetch trending movies and tv shows. User can watch trailers which is embedded from youtube using movie-trailers library.",
+        imageDir: "/projects/netflix/",
+        images: [netflix_home],
+        liveURL: "https://netflix-clone-2db66.web.app",
+        sourceCodeURL: "https://github.com/ashukumar2001/netflix-clone-frontend",
     },
 ];
 export const experience = [

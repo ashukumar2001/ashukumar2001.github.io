@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ParticlesBackground from "@/components/backgrounds/particle";
 import Navbar from "@/components/navbar";
 import CursorProvider from "@/components/cursor/CursorProvider";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import AnimatedLayersProvider from "@/context/animated-layers-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,17 +23,18 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <ParticlesBackground />
-          <div className="container mx-auto h-full relative">
-            <CursorProvider>
-              <Navbar />
-              {children}
-            </CursorProvider>
-          </div>
+          <AnimatedLayersProvider>
+            <div className="container mx-auto h-full relative">
+              <CursorProvider>
+                <Navbar />
+                {children}
+              </CursorProvider>
+            </div>
+          </AnimatedLayersProvider>
         </ThemeProvider>
       </body>
     </html>
