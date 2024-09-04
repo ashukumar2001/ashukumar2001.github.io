@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useMemo } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
   // type Container,
@@ -9,10 +9,12 @@ import {
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 import { useTheme } from "next-themes";
+import { AnimatedLayerContext } from "@/context/animated-layers-provider";
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
 const ParticlesBackground = () => {
-  const [init, setInit] = useState(false);
+  // const [init, setInit] = useState(false);
+  const { init, setInit } = useContext(AnimatedLayerContext);
   const { theme } = useTheme();
   const isDarkMode = theme === "dark";
 
@@ -125,10 +127,11 @@ const ParticlesBackground = () => {
       // starting from v2 you can add only the features you need reducing the bundle size
       //await loadAll(engine);
       //await loadFull(engine);
+      await new Promise((resolve) => setTimeout(resolve, 500));
       await loadSlim(engine);
       //await loadBasic(engine);
     }).then(() => {
-      setInit(true);
+      setInit?.(true);
     });
   }, [options]);
 
