@@ -17,12 +17,12 @@ export default function About() {
   const aboutRef = useRef<HTMLDivElement>(null);
   useGSAP(
     () => {
-      // const lenis = new Lenis();
-      // lenis.on("scroll", ScrollTrigger.update);
-      // gsap.ticker.add((time) => {
-      //   lenis.raf(time * 500);
-      // });
-      // gsap.ticker.lagSmoothing(0);
+      const lenis = new Lenis();
+      lenis.on("scroll", ScrollTrigger.update);
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 500);
+      });
+      gsap.ticker.lagSmoothing(0);
       const elements: HTMLElement[] = gsap.utils.toArray(
         aboutRef.current?.children!
       );

@@ -3,6 +3,7 @@ import {
     InstagramFilled,
     LinkedinFilled,
     TwitterCircleFilled,
+    MailFilled
 } from "@ant-design/icons";
 import boardify_home from "@/public/projects/boardify/boardify_home.png"
 import boardify_editor from "@/public/projects/boardify/boardify_editor.png"
@@ -79,6 +80,13 @@ export const social_links = [
         description: "@its_ashuk",
         icon: TwitterCircleFilled,
         url: "https://twitter.com/its_ashuk",
+    },
+    {
+        id: 5,
+        name: "Mail",
+        description: "work.ashu@icloud.com",
+        icon: MailFilled,
+        url: "mailto:work.ashu@icloud.com",
     },
 ];
 

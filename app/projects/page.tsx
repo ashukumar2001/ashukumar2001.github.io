@@ -32,12 +32,12 @@ const Projects = () => {
 
   useGSAP(
     () => {
-      // const lenis = new Lenis();
-      // lenis.on("scroll", ScrollTrigger.update);
-      // gsap.ticker.add((time) => {
-      //   lenis.raf(time * 500);
-      // });
-      // gsap.ticker.lagSmoothing(0);
+      const lenis = new Lenis();
+      lenis.on("scroll", ScrollTrigger.update);
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 500);
+      });
+      gsap.ticker.lagSmoothing(0);
 
       let tabs: HTMLElement[] = gsap.utils.toArray(".tab");
       tabs.forEach((tab, i) => {
