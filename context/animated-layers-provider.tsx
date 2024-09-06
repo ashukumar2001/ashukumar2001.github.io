@@ -9,21 +9,23 @@ import {
 } from "react";
 
 export const AnimatedLayerContext = createContext<{
-  init: boolean;
-  setInit?: Dispatch<SetStateAction<boolean>>;
-}>({ init: false });
+  particlesLoaded: boolean;
+  setParticlesLoaded?: Dispatch<SetStateAction<boolean>>;
+}>({ particlesLoaded: false });
 
 const AnimatedLayersProvider = ({
   children,
 }: {
   children: React.ReactNode;
 }) => {
-  const [init, setInit] = useState(false);
+  const [particlesLoaded, setParticlesLoaded] = useState(false);
   return (
-    <AnimatedLayerContext.Provider value={{ init, setInit }}>
+    <AnimatedLayerContext.Provider
+      value={{ particlesLoaded, setParticlesLoaded }}
+    >
       <ParticlesBackground />
-      <Loader visible={!init} />
-      {init && children}
+      <Loader visible={!particlesLoaded} />
+      {particlesLoaded && children}
     </AnimatedLayerContext.Provider>
   );
 };

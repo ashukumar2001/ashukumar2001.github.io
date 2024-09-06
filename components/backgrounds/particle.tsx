@@ -1,10 +1,7 @@
 "use client";
-import { useContext, useEffect, useMemo } from "react";
+import { useCallback, useContext, useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import {
-  // type Container,
-  type ISourceOptions,
-} from "@tsparticles/engine";
+import type { Container, ISourceOptions } from "@tsparticles/engine";
 // import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
@@ -13,8 +10,8 @@ import { AnimatedLayerContext } from "@/context/animated-layers-provider";
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
 const ParticlesBackground = () => {
-  // const [init, setInit] = useState(false);
-  const { init, setInit } = useContext(AnimatedLayerContext);
+  const [init, setInit] = useState(false);
+  const { setParticlesLoaded } = useContext(AnimatedLayerContext);
   const { theme } = useTheme();
   const isDarkMode = theme === "dark";
 
@@ -28,7 +25,7 @@ const ParticlesBackground = () => {
       fullScreen: false,
       particles: {
         number: {
-          value: 160,
+          value: 60,
           density: {
             enable: true,
             value_area: 800,
@@ -118,7 +115,12 @@ const ParticlesBackground = () => {
     }),
     [isDarkMode]
   );
-
+  const particlesLoaded = useCallback(
+    async (container?: Container | undefined) => {
+      setParticlesLoaded?.(true);
+    },
+    []
+  );
   // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -130,7 +132,7 @@ const ParticlesBackground = () => {
       await loadSlim(engine);
       //await loadBasic(engine);
     }).then(() => {
-      setInit?.(true);
+      setInit(true);
     });
   }, [options]);
 
@@ -138,7 +140,7 @@ const ParticlesBackground = () => {
     return (
       <Particles
         id="tsparticles"
-        // particlesLoaded={particlesLoaded}
+        particlesLoaded={particlesLoaded}
         options={options}
       />
     );
