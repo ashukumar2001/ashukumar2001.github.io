@@ -127,7 +127,6 @@ const ParticlesBackground = () => {
       // starting from v2 you can add only the features you need reducing the bundle size
       //await loadAll(engine);
       //await loadFull(engine);
-      await new Promise((resolve) => setTimeout(resolve, 500));
       await loadSlim(engine);
       //await loadBasic(engine);
     }).then(() => {
