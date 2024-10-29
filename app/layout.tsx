@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import CursorProvider from "@/components/cursor/CursorProvider";
 import { ThemeProvider } from "@/components/theme/theme-provider";
-import AnimatedLayersProvider from "@/context/animated-layers-provider";
+import ParticlesBackground from "@/components/background/particles-bg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,17 +24,15 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem
           disableTransitionOnChange
         >
-          <AnimatedLayersProvider>
-            <div className="container mx-auto h-full relative">
-              <CursorProvider>
-                <Navbar />
-                {children}
-              </CursorProvider>
-            </div>
-          </AnimatedLayersProvider>
+          <div className="container mx-auto h-full relative">
+            <ParticlesBackground />
+            <CursorProvider>
+              <Navbar />
+              {children}
+            </CursorProvider>
+          </div>
         </ThemeProvider>
       </body>
     </html>
