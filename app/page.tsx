@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import gsap from "gsap";
-import { details } from "@/data";
+import { details } from "@/config/site-config";
 export default function Home() {
   const introParaRef = useRef(null);
 
