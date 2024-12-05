@@ -97,7 +97,7 @@ export const projects = [
     description: "A real-time chat application for one to one chat.",
     imageDir: "/projects/texting/",
     images: [texting_screens],
-    liveURL: "https://texting-azure.vercel.app",
+    liveURL: "https://texting.ashudev.me",
     sourceCodeURL: "https://github.com/ashukumar2001/texting",
   },
   {
