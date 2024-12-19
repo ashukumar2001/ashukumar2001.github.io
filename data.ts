@@ -9,6 +9,8 @@ import boardify_home from "@/public/projects/boardify/boardify_home.png";
 import boardify_editor from "@/public/projects/boardify/boardify_editor.png";
 import texting_screens from "@/public/projects/texting/texting-screens.png";
 import netflix_home from "@/public/projects/netflix/Netflix_home.png";
+import xbeats_home from "@/public/projects/xbeats/xbeats-home.png";
+import xbeats_playlist from "@/public/projects/xbeats/xbeats-playlist.png";
 export const skills = [
   {
     id: 1,
@@ -91,6 +93,14 @@ export const social_links = [
 ];
 
 export const projects = [
+  {
+    id: 4,
+    name: "Xbeats",
+    description: "A web app for streaming and discovering music, offering personalized playlists and recommendations.",
+    imageDir: "/projects/xbeats/",
+    images: [xbeats_home, xbeats_playlist],
+    liveURL: "https://xbeats.ashudev.me",
+  },
   {
     id: 1,
     name: "Texting",
