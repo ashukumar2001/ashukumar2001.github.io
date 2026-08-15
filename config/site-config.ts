@@ -13,10 +13,10 @@ export const siteConfig = {
     name: "Ashu",
     url: "https://ashudev.me",
     email: "work.ashu@icloud.com",
-    x: "@its_ashuk",
+    x: "@ashu_codes",
   },
   links: {
     github: "https://github.com/ashukumar2001",
-    x: "https://twitter.com/its_ashuk",
+    x: "https://twitter.com/ashu_codes",
   },
 };

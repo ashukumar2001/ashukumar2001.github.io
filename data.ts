@@ -11,6 +11,7 @@ import texting_screens from "@/public/projects/texting/texting-screens.png";
 import netflix_home from "@/public/projects/netflix/Netflix_home.png";
 import xbeats_home from "@/public/projects/xbeats/xbeats-home.png";
 import xbeats_playlist from "@/public/projects/xbeats/xbeats-playlist.png";
+import eddy_screenshot from "@/public/projects/eddy/eddy.png";
 export const skills = [
   {
     id: 1,
@@ -79,9 +80,9 @@ export const social_links = [
   {
     id: 4,
     name: "Twitter",
-    description: "@its_ashuk",
+    description: "@ashu_codes",
     icon: TwitterCircleFilled,
-    url: "https://twitter.com/its_ashuk",
+    url: "https://twitter.com/ashu_codes",
   },
   {
     id: 5,
@@ -93,6 +94,15 @@ export const social_links = [
 ];
 
 export const projects = [
+  {
+    id: 5,
+    name: "Eddy",
+    description: "AI powered chat",
+    imageDir: "/projects/eddy/",
+    images: [eddy_screenshot],
+    liveURL: "https://eddy.byashu.workers.dev/",
+    sourceCodeURL: "https://github.com/ashukumar2001/eddy",
+  },
   {
     id: 4,
     name: "Xbeats",
