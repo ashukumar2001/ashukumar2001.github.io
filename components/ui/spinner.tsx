@@ -13,7 +13,7 @@ export default function Spinner({
   return (
     <div
       className={cn(
-        "m-2 h-8 w-8 animate-spin items-center justify-center rounded-full bg-gradient-to-bl from-white to-black p-0.5",
+        "m-2 h-8 w-8 animate-spin items-center justify-center rounded-full bg-linear-to-bl from-white to-black p-0.5",
         className,
         outerSize
       )}

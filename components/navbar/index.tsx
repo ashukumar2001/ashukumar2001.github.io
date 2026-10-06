@@ -5,7 +5,6 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ModeToggle } from "../theme/mode-toggle";
-import { cn } from "@/lib/utils";
 
 gsap.registerPlugin(useGSAP);
 const links = [
@@ -84,7 +83,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className="w-full absolute flex justify-center py-3 -top-full left-0 z-[998] gap-3 h-20"
+      className="w-full absolute flex justify-center py-3 -top-full left-0 z-998 gap-3 h-20"
     >
       <ul
         ref={navLinksRef}
@@ -101,7 +100,7 @@ const Navbar = () => {
 
         <div
           ref={activeLinkIndicatorRef}
-          className="dark:bg-white/10 bg-gray-100 rounded-full absolute -z-[1] opacity-0"
+          className="dark:bg-white/10 bg-gray-100 rounded-full absolute z-[-1] opacity-0"
         ></div>
       </ul>
       <div className="relative flex flex-row justify-center items-center border w-14 h-full gap-3  rounded-full dark:bg-gray-950/10 bg-white/5 border-neutral-700 backdrop-blur-[2px]">
