@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
 export const cursorContext = createContext<{
-    cursorUtils: {
+    cursorUtilsRef: {
         current: {
             xTo: gsap.QuickToFunc,
             yTo: gsap.QuickToFunc,
@@ -11,4 +11,4 @@ export const cursorContext = createContext<{
         } | null
     },
     cursorRef: React.MutableRefObject<HTMLDivElement | null> | null
-}>({ cursorUtils: { current: null }, cursorRef: null });
+}>({ cursorUtilsRef: { current: null }, cursorRef: null });

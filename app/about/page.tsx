@@ -9,7 +9,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Link from "next/link";
-import Lenis from "@studio-freight/lenis";
+import { siteConfig } from "@/config/site-config";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -17,14 +17,9 @@ export default function About() {
   const aboutRef = useRef<HTMLDivElement>(null);
   useGSAP(
     () => {
-      const lenis = new Lenis();
-      lenis.on("scroll", ScrollTrigger.update);
-      gsap.ticker.add((time) => {
-        lenis.raf(time * 500);
-      });
-      gsap.ticker.lagSmoothing(0);
+      if (!aboutRef.current) return;
       const elements: HTMLElement[] = gsap.utils.toArray(
-        aboutRef.current?.children!
+        aboutRef.current.children
       );
       elements.map((el) => {
         gsap.fromTo(
@@ -56,14 +51,8 @@ export default function About() {
           <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
             👋&nbsp;&nbsp;Introduction
           </h2>
-          <p className="text-xl mb-4">Hi, I&apos;m Ashu.</p>
-          <p className="text-md mb-4">
-            A pixel-perfectionist by day and a UI artist by night, I infuse
-            aesthetics into functionality. My designs are not just visually
-            appealing; they are a testament to the marriage of form and
-            function. A seamless fusion of beauty and usability, leaving an
-            indelible mark on the minds of users.
-          </p>
+          <p className="text-xl mb-4">Hi, I&apos;m {siteConfig.author.name}</p>
+          <p className="text-md mb-4">{siteConfig.intro}</p>
           <Button size="sm" variant="outline" asChild>
             <Link href="/Ashu_Resume.pdf" target="_blank">
               See Resume&nbsp;

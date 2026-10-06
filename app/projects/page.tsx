@@ -3,13 +3,13 @@ import React, { useRef } from "react";
 import { cn } from "@/lib/utils";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
-import { Github, MoveUpRight } from "lucide-react";
+import { MoveUpRight } from "lucide-react";
+import { IconBrandGithub } from "@tabler/icons-react";
 import { projects } from "@/data";
 import Link from "next/link";
-import { motion, Variants } from "framer-motion";
+import { motion, type Variants } from "motion/react";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { ImageSwiper } from "@/components/ui/image-swiper";
 gsap.registerPlugin(useGSAP);
@@ -32,14 +32,7 @@ const Projects = () => {
 
   useGSAP(
     () => {
-      const lenis = new Lenis();
-      lenis.on("scroll", ScrollTrigger.update);
-      gsap.ticker.add((time) => {
-        lenis.raf(time * 500);
-      });
-      gsap.ticker.lagSmoothing(0);
-
-      let tabs: HTMLElement[] = gsap.utils.toArray(".tab");
+      const tabs: HTMLElement[] = gsap.utils.toArray(".tab");
       tabs.forEach((tab, i) => {
         gsap.set(tab, {
           y: 0,
@@ -71,7 +64,7 @@ const Projects = () => {
       <section ref={projectsContainerRef} className="space-y-3 md:w-3/4">
         {projects.map(
           (
-            { name, images, imageDir, description, liveURL, sourceCodeURL },
+            { name, images, description, liveURL, sourceCodeURL },
             i
           ) => {
             return (
@@ -108,7 +101,7 @@ const Projects = () => {
                         {sourceCodeURL && (
                           <Link href={sourceCodeURL} target="_blank">
                             <Button variant="outline" size="sm" title="Visit">
-                              <Github size={16} className="mr-2" />
+                              <IconBrandGithub size={16} className="mr-2" />
                               Source Code
                             </Button>
                           </Link>

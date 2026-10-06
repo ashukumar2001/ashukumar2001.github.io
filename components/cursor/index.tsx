@@ -10,22 +10,22 @@ gsap.registerPlugin(useGSAP);
 
 const Cursor = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
-  const { cursorUtils, cursorRef: cursorRefFromContext } =
+  const { cursorUtilsRef, cursorRef: contextCursorRef } =
     useContext(cursorContext);
   useGSAP(() => {
-    let xTo = gsap.quickTo(cursorRef.current, "x", {
+    const xTo = gsap.quickTo(cursorRef.current, "x", {
       duration: 0.4,
       ease: "power3",
     });
-    let yTo = gsap.quickTo(cursorRef.current, "y", {
+    const yTo = gsap.quickTo(cursorRef.current, "y", {
       duration: 0.4,
       ease: "power3",
     });
-    let widthTo = gsap.quickTo(cursorRef.current, "width", {
+    const widthTo = gsap.quickTo(cursorRef.current, "width", {
       duration: 0.4,
       ease: "power3",
     });
-    let heightTo = gsap.quickTo(cursorRef.current, "height", {
+    const heightTo = gsap.quickTo(cursorRef.current, "height", {
       duration: 0.4,
       ease: "power3",
     });
@@ -51,14 +51,14 @@ const Cursor = () => {
     const unfollowCursor = () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-    cursorUtils.current = {
+    cursorUtilsRef.current = {
       xTo,
       yTo,
       scaleTo,
       followCursor,
       unfollowCursor,
     };
-    if (cursorRefFromContext) cursorRefFromContext.current = cursorRef.current;
+    if (contextCursorRef) contextCursorRef.current = cursorRef.current;
 
     window.addEventListener("mouseover", handleMouseOver);
     window.addEventListener("mouseout", handleMouseLeave);
@@ -75,7 +75,7 @@ const Cursor = () => {
       <div
         className={cn(
           styles.cursorBall,
-          "before:border before:border-black before:dark:border-white"
+          "before:border before:border-black dark:before:border-white"
         )}
       ></div>
     </div>
