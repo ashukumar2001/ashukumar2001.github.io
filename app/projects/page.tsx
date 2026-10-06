@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 import { cn } from "@/lib/utils";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import Lenis from "lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
 import { MoveUpRight } from "lucide-react";
@@ -33,13 +32,6 @@ const Projects = () => {
 
   useGSAP(
     () => {
-      const lenis = new Lenis();
-      lenis.on("scroll", ScrollTrigger.update);
-      gsap.ticker.add((time) => {
-        lenis.raf(time * 500);
-      });
-      gsap.ticker.lagSmoothing(0);
-
       const tabs: HTMLElement[] = gsap.utils.toArray(".tab");
       tabs.forEach((tab, i) => {
         gsap.set(tab, {

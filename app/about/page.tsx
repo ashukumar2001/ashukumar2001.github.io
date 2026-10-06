@@ -9,7 +9,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Link from "next/link";
-import Lenis from "lenis";
 import { siteConfig } from "@/config/site-config";
 
 gsap.registerPlugin(useGSAP);
@@ -18,12 +17,6 @@ export default function About() {
   const aboutRef = useRef<HTMLDivElement>(null);
   useGSAP(
     () => {
-      const lenis = new Lenis();
-      lenis.on("scroll", ScrollTrigger.update);
-      gsap.ticker.add((time) => {
-        lenis.raf(time * 500);
-      });
-      gsap.ticker.lagSmoothing(0);
       if (!aboutRef.current) return;
       const elements: HTMLElement[] = gsap.utils.toArray(
         aboutRef.current.children
