@@ -23,7 +23,7 @@ Personal portfolio site for Ashu (front-end developer). Built with Next.js 14 Ap
   - `config/site-config.ts` — site metadata, author info, links, intro text
   - `constants.ts` — shared constants (e.g. `SKILLS_BASE_PATH` for tech icon assets)
 - **Styling**: Tailwind with shadcn-style CSS variables (`hsl(var(--...))`) defined in `app/globals.css`. Dark mode via `next-themes` using the `class` strategy, defaulting to dark.
-- **Animation pattern**: GSAP via `@gsap/react` `useGSAP` hook + `SplitType` for text reveals; scroll-driven animation uses `Lenis` + `gsap/ScrollTrigger` wired together (see `app/about/page.tsx`). Register plugins with `gsap.registerPlugin(...)`.
+- **Animation pattern**: GSAP via `@gsap/react` `useGSAP` hook + `SplitType` for text reveals; smooth scrolling comes from the single Lenis instance mounted app-wide in `components/smooth-scroll/`, which drives `ScrollTrigger.update` from the GSAP ticker — never instantiate `Lenis` inside a page. Register plugins with `gsap.registerPlugin(...)`.
 
 ## Conventions
 

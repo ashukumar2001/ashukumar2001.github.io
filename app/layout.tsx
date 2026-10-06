@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import CursorProvider from "@/components/cursor/CursorProvider";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import ParticlesBackground from "@/components/background/particles-bg";
+import SmoothScroll from "@/components/smooth-scroll";
 import { siteConfig } from "@/config/site-config";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -109,6 +110,7 @@ export default function RootLayout({
         >
           <div className="container mx-auto h-full relative">
             <ParticlesBackground />
+            <SmoothScroll />
             <CursorProvider>
               <Navbar />
               {children}

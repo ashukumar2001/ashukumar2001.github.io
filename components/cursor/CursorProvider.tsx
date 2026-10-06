@@ -4,10 +4,10 @@ import { cursorContext } from "./cursorContext";
 import Cursor from ".";
 
 const CursorProvider = ({ children }: { children: React.ReactNode }) => {
-  const cursorUtils = useRef(null);
+  const cursorUtilsRef = useRef(null);
   const cursorRef = useRef<HTMLDivElement>(null);
   return (
-    <cursorContext.Provider value={{ cursorUtils, cursorRef }}>
+    <cursorContext.Provider value={{ cursorUtilsRef, cursorRef }}>
       <Cursor />
       {children}
     </cursorContext.Provider>
